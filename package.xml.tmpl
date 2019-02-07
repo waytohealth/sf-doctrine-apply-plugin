@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.7.1" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd  http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+  <name>sfDoctrineApplyPlugin</name>
+  <channel>pear.symfony-project.com</channel>
+  <summary>Allows users to apply for accounts</summary>
+  <description>Allows users of a site protected by sfDoctrineGuardPlugin to create new accounts, verifying them by email. Both account creation and password changes require email verification as a speed bump to slow down spammers.</description>
+  <lead>
+    <name>Tom Boutell</name>
+    <user>boutell</user>
+    <email>tom@punkave.com</email>
+    <active>yes</active>
+  </lead>
+  <lead>
+    <name>Alex Gilbert</name>
+    <user>agilbert</user>
+    <email>alex@punkave.com</email>
+    <active>yes</active>
+  </lead>
+  <date>##CURRENT_DATE##</date>
+  <version>
+    <release>##PLUGIN_VERSION##</release>
+    <api>##API_VERSION##</api>
+  </version>
+  <stability>
+    <release>##STABILITY##</release>
+    <api>##STABILITY##</api>
+  </stability>
+  <license uri="http://www.symfony-project.org/license">MIT license</license>
+  <notes>-</notes>
+  <contents>
+   ##CONTENTS##
+ </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.0.0</min>
+      </php>
+      <pearinstaller>
+        <min>1.4.1</min>
+      </pearinstaller>
+      <package>
+        <name>symfony</name>
+        <channel>pear.symfony-project.com</channel>
+        <min>1.2.0</min>
+        <max>2.0.0</max>
+        <exclude>2.0.0</exclude>
+      </package>
+    </required>
+  </dependencies>
+  <phprelease/>
+  <changelog>
+    <release>
+      <version>
+        <release>1.2.2</release>
+        <api>1.2.2</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <date>2012-11-13</date>
+      <notes> * License reflects P'unk Avenue's sponsorship of this plugin
+</notes>
+    </release>
+    <release>
+      <version>
+        <release>1.2.1</release>
+        <api>1.2.1</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <date>2012-11-13</date>
+      <notes> 
+        * Version 1.2 (which was only released via svn) added support for the newer stable version of sfDoctrineGuardPlugin and has been the only one we've used for some time. Uses SwiftMailer like other sensible Symfony 1.4 projects.
+        * Version 1.2.1 of sfDoctrineApplyPlugin optionally supports Facebook login. Also refactored the partials a bit to make it easier to selectively override still with all the new Facebook stuff present. Facebook logins capture email addresses and full names.
+        * More 1.2-era changes: all forms are now empty extensions of Base versions, so you can do the usual Symfony thing to override them at the project level (specifying a particular replacement class via app.yml is still supported too). Made private methods in BasesfApplyActions protected. Removed setting of form formatter in forms.
+      </notes>
+    </release>
+    <release>
+      <version>
+        <release>1.1.1</release>
+        <api>1.1.1</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2010-02-02</date>
+      <notes>Users can now retrieve forgotten usernames, provided they know what email address was used to register. You can reset your password using either your email address or your username. PHP warning about retrieveByUsername has been fixed. Standard emails have been written to feel a little less "phishy" so they are not mistaken for spam, but you are still responsible for overriding the subject lines with something other than the hostname of your site. Documented 1.4 compatibility.</notes>
+    </release>
+    <release>
+      <version>
+        <release>1.1.0</release>
+        <api>1.1.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2009-10-28</date>
+      <notes>Uses Zend Mailer, but also provides a way to override that. Usernames are now strictly limited to "^\w+$". &lt;, &gt;, &amp; and | are forbidden in full names.</notes>
+    </release>
+    <release>
+      <version>
+        <release>1.0.1</release>
+        <api>1.0.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2009-03-06</date>
+      <notes>Corrected reference to sfDoctrineGuardPlugin (for real this time).</notes>
+    </release>
+    <release>
+      <version>
+        <release>1.0.0</release>
+        <api>1.0.0</api>
+      </version>
+      <stability>
+        <release>stable</release>
+        <api>stable</api>
+      </stability>
+      <license uri="http://www.symfony-project.org/license">MIT license</license>
+      <date>2009-03-06</date>
+      <notes>First stable release. All recent changes have been related to documentation or packaging.</notes>
+    </release>
+  </changelog>
+</package>
