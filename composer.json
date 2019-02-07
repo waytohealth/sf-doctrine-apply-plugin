@@ -1,0 +1,16 @@
+{
+    "name": "waytohealth/sf-doctrine-apply-plugin",
+    "type": "symfony1-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Boutell",
+            "email": "tom@punkave.com"
+        },
+        {
+            "name": "Alex Gilbert",
+            "email": "alex@punkave.com"
+        }
+    ],
+    "require": {}
+}
